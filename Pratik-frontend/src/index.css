@@ -1,0 +1,362 @@
+/* ===== PORTFOLIO BACKGROUND ===== */
+
+.portfolio-section {
+    background: linear-gradient( 135deg, rgba(255, 246, 230, 0.95), rgba(250, 240, 225, 0.9)), url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1800");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ===== Fade Up Animation ===== */
+
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(35px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== Glass Card ===== */
+
+.portfolio-card-glass {
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+}
+
+.portfolio-card-glass:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== Image ===== */
+
+.portfolio-img-wrap {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    height: 280px;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.portfolio-card-glass:hover .portfolio-img {
+    transform: scale(1.1);
+}
+
+
+/* ===== Image Overlay (Luxury feel) ===== */
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.35));
+}
+
+
+/* ===== Card Content ===== */
+
+
+/* ===== Masonry Container ===== */
+
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 16px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+}
+
+
+/* ===== Masonry Item ===== */
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+
+/* ===== Image ===== */
+
+.masonry-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+
+/* Hover */
+
+.masonry-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ===== Animation ===== */
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-card-glass {
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.portfolio-card-glass:hover {
+    transform: translateY(-6px);
+}
+
+.animate-fade-up {
+    animation: fadeUp .7s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-section {
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 12px;
+}
+
+.btn-primary {
+    border-radius: 30px;
+}
+
+
+/* ===== FOOTER FIXED ===== */
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0f0f0f, #181818);
+    color: #ccc;
+    padding: 18px 0 14px;
+    z-index: 999;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* BRAND */
+
+.footer-brand {
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+
+/* TAGLINE */
+
+.footer-tagline {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 14px;
+}
+
+
+/* SOCIALS */
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    margin-bottom: 14px;
+}
+
+.footer-socials a {
+    font-size: 20px;
+    color: #bbb;
+    transition: all 0.35s ease;
+}
+
+.footer-socials a:hover {
+    color: #c69c6d;
+    transform: translateY(-5px) scale(1.15);
+}
+
+
+/* DIVIDER */
+
+.footer-divider {
+    width: 120px;
+    height: 2px;
+    margin: 0 auto 10px;
+    background: linear-gradient(to right, transparent, #c69c6d, transparent);
+}
+
+
+/* COPYRIGHT */
+
+.footer-copy {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 0;
+}
+
+
+/* ===== BODY SPACE FIX ===== */
+
+body {
+    padding-bottom: 90px;
+    /* footer height avoid overlap */
+}
+
+
+/* FULL HEIGHT LAYOUT */
+
+html,
+body {
+    height: 100%;
+}
+
+#root {
+    min-height: 100%;
+}
+
+
+/* APP FLEX */
+
+.app-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* MAIN CONTENT */
+
+.content-wrapper {
+    flex: 1;
+    /* 🔥 this pushes footer down when content is small */
+}
+
+
+/* FOOTER STYLING */
+
+.site-footer {
+    background: linear-gradient(135deg, #0f0f0f, #181818);
+    color: #ccc;
+    padding: 24px 0 18px;
+}
+
+
+/* BRAND */
+
+.footer-brand {
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+
+/* TAGLINE */
+
+.footer-tagline {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 14px;
+}
+
+
+/* SOCIALS */
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    margin-bottom: 14px;
+}
+
+.footer-socials a {
+    font-size: 20px;
+    color: #bbb;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #c69c6d;
+    transform: translateY(-4px) scale(1.1);
+}
+
+
+/* DIVIDER */
+
+.footer-divider {
+    width: 120px;
+    height: 2px;
+    margin: 0 auto 10px;
+    background: linear-gradient(to right, transparent, #c69c6d, transparent);
+}
+
+
+/* COPYRIGHT */
+
+.footer-copy {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 0;
+}
